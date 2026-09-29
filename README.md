@@ -1,8 +1,8 @@
-# Séptimo Cielo AR — MVP V3
+# Séptimo Cielo — Carta Inmersiva V4
 
-Demo móvil con 4 platos: Tomahawk, Hamburguesa de Tocino, Costillas BBQ y Mar y Tierra. Cada plato incluye poster propio, modelo GLB demostrativo, visor 360° y botón AR mediante `<model-viewer>`.
+Versión comercial del prototipo móvil 3D + AR.
 
-## GitHub Pages
-Sube **todos los archivos de esta carpeta a la raíz del repositorio**, igual que en la V2. No crees subcarpetas: `index.html`, `menu.json`, `.glb` y `.jpg` deben quedar juntos.
+## Publicación
+Subir todos los archivos directamente a la raíz del repositorio de GitHub Pages. No crear una carpeta contenedora adicional.
 
-Los modelos son representaciones demostrativas; no son escaneos de los platos reales.
+Los modelos 3D son visualizaciones referenciales del prototipo y deben sustituirse por digitalizaciones autorizadas para una implementación final.
