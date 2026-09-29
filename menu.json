@@ -1,0 +1,19 @@
+{
+  "restaurant": "Séptimo Cielo",
+  "location": "Calle 8 #79-96, Bogotá",
+  "version": "MVP V2",
+  "dishes": [
+    {
+      "id": "tomahawk",
+      "name": "Tomahawk",
+      "category": "Carnes",
+      "price": 70000,
+      "priceLabel": "$70.000",
+      "description": "Corte parrillado compuesto por costilla, lomo ancho y lomo fino.",
+      "model": "assets/models/tomahawk-demo.glb",
+      "poster": "assets/images/tomahawk-demo.jpg",
+      "demo": true,
+      "physicalScale": "Plato demostrativo de ~32 cm"
+    }
+  ]
+}
