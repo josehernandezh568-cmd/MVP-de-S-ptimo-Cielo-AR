@@ -1,8 +1,5 @@
-# Séptimo Cielo — Carta Inmersiva V4
+# Séptimo Cielo — V7
 
-Versión comercial del prototipo móvil 3D + AR.
+Carta unificada: categoría → producto → ficha → 3D/AR cuando el activo está disponible. Los modelos se cargan bajo demanda.
 
-## Publicación
-Subir todos los archivos directamente a la raíz del repositorio de GitHub Pages. No crear una carpeta contenedora adicional.
-
-Los modelos 3D son visualizaciones referenciales del prototipo y deben sustituirse por digitalizaciones autorizadas para una implementación final.
+Los cuatro activos actuales son demostrativos. El resto de fichas queda preparado para incorporar digitalizaciones futuras sin rediseñar la interfaz.
