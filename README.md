@@ -60,3 +60,7 @@ Layout V9 restaurado. Solo Tomahawk usa cámara 155% para quedar dentro de la cu
 - Se conservan el ancho, fondo y estructura visual del Ceviche usado como referencia.
 - Tomahawk usa un encuadre propio más alejado (175%) para entrar completo dentro de la misma cuadrícula.
 - No se modifica la orientación ni el funcionamiento AR.
+
+
+## V10 — Chicharrones 3D Gen 2
+Añade Chicharrones a 3D/AR con panceta por capas, papa criolla, guacamole, pico de gallo y ají. Mantiene el estándar móvil V9.3 sin scroll horizontal y AR Y-up/floor/fixed. Modelo referencial de demostración; sustituible por digitalización del plato real.
