@@ -88,3 +88,8 @@ Se conserva el catálogo aprobado de 10 modelos 3D/AR y se añade una capa de ex
 - señalización “3D + AR disponible”;
 - instrucción contextual dentro del detalle del plato;
 - arquitectura, cámaras, orientación, escala AR y responsive previamente aprobados sin cambios.
+
+## V16 — Rediseño Premium
+Dirección de arte refinada para integrar la experiencia 3D/AR con la identidad editorial del sitio:
+marfil, tinta, cobre, serif, líneas finas y mayor aire visual. Se elimina el bloque negro de V15.
+Los 10 modelos, cámaras, escala, AR y comportamiento móvil permanecen intactos.

@@ -1,5 +1,5 @@
-SÉPTIMO CIELO V15 — EXPERIENCIA COMERCIAL
+SÉPTIMO CIELO V16 — REDISEÑO PREMIUM
 Este ZIP contiene el repositorio completo.
 Reemplaza el contenido anterior por TODOS los archivos de este paquete.
 No mezcles versiones. index.html debe quedar directamente en la raíz.
-Los 10 modelos 3D/AR aprobados se mantienen.
+Los 10 modelos 3D/AR aprobados permanecen intactos.

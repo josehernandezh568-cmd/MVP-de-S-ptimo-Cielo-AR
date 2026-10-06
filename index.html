@@ -123,37 +123,79 @@ html,body{overflow-x:hidden}
 }
 
 
-/* V15 — capa comercial 3D/AR */
+
+/* V16 — dirección de arte premium */
+:root{
+  --sc-ivory:#f4efe6;
+  --sc-ink:#171512;
+  --sc-copper:#b86d3f;
+  --sc-line:rgba(43,34,27,.16);
+}
 .ar-experience-banner{
-  max-width:1180px;margin:18px auto 6px;padding:0 22px;
+  max-width:1180px;margin:28px auto 18px;padding:0 22px;
 }
 .ar-experience-inner{
-  position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.12);
-  border-radius:22px;padding:22px 24px;background:
-  radial-gradient(circle at 85% 20%,rgba(255,255,255,.10),transparent 32%),
-  linear-gradient(135deg,rgba(24,24,24,.98),rgba(8,8,8,.98));
-  box-shadow:0 18px 45px rgba(0,0,0,.22);
+  position:relative;overflow:hidden;
+  border-top:1px solid var(--sc-line);
+  border-bottom:1px solid var(--sc-line);
+  padding:34px 0 31px;
+  background:transparent;
+  box-shadow:none;
+  color:var(--sc-ink);
 }
-.ar-experience-kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.68;margin-bottom:8px}
-.ar-experience-title{font-family:Georgia,serif;font-size:clamp(25px,4vw,42px);line-height:1.04;margin:0 0 10px}
-.ar-experience-copy{max-width:690px;line-height:1.55;opacity:.78;margin:0}
-.ar-experience-steps{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
-.ar-step{border:1px solid rgba(255,255,255,.13);border-radius:999px;padding:8px 11px;font-size:11px;letter-spacing:.06em}
+.ar-experience-inner:after{
+  content:"AR";position:absolute;right:1%;top:-28px;
+  font-family:Georgia,serif;font-size:150px;line-height:1;
+  color:rgba(184,109,63,.055);letter-spacing:-.08em;pointer-events:none;
+}
+.ar-experience-kicker{
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--sc-copper);margin-bottom:12px;font-weight:600;
+}
+.ar-experience-title{
+  font-family:Georgia,serif;font-weight:400;
+  font-size:clamp(31px,4.2vw,54px);line-height:1.02;
+  letter-spacing:-.035em;margin:0 0 13px;max-width:760px;color:var(--sc-ink);
+}
+.ar-experience-copy{
+  max-width:650px;line-height:1.65;margin:0;color:rgba(23,21,18,.66);
+  font-size:13px;
+}
+.ar-experience-steps{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  max-width:760px;margin-top:25px;border-top:1px solid var(--sc-line);
+}
+.ar-step{
+  position:relative;border:0;border-right:1px solid var(--sc-line);
+  border-radius:0;padding:14px 18px 2px 0;margin-right:18px;
+  font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(23,21,18,.72);
+}
+.ar-step:last-child{border-right:0}
 .ar-availability-pill{
-  display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:7px 10px;
-  border:1px solid rgba(255,255,255,.14);border-radius:999px;font-size:10px;
-  letter-spacing:.11em;text-transform:uppercase;background:rgba(255,255,255,.055)
+  display:inline-flex;align-items:center;gap:7px;margin:10px 0 0;
+  padding:7px 10px;border:1px solid rgba(184,109,63,.35);
+  border-radius:999px;font-size:9px;letter-spacing:.13em;text-transform:uppercase;
+  background:rgba(184,109,63,.07);color:inherit;
 }
-.ar-availability-pill:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor}
+.ar-availability-pill:before{
+  content:"";width:5px;height:5px;border-radius:50%;
+  background:#b86d3f;box-shadow:0 0 0 3px rgba(184,109,63,.10)
+}
 .ar-first-tip{
-  margin-top:13px;padding:11px 13px;border-left:2px solid rgba(255,255,255,.65);
-  background:rgba(255,255,255,.045);font-size:12px;line-height:1.5;opacity:.86
+  margin:13px 0 8px;padding:10px 0 10px 12px;
+  border-left:1px solid rgba(184,109,63,.65);
+  background:transparent;font-size:11px;line-height:1.55;opacity:.72;
 }
 @media(max-width:759px){
- .ar-experience-banner{padding:0 14px;margin-top:12px}
- .ar-experience-inner{padding:19px 18px;border-radius:18px}
- .ar-experience-copy{font-size:13px}
- .ar-step{font-size:10px}
+  .ar-experience-banner{padding:0 20px;margin:12px auto 8px}
+  .ar-experience-inner{padding:27px 0 24px}
+  .ar-experience-inner:after{font-size:92px;top:-5px;right:4%}
+  .ar-experience-title{font-size:34px;max-width:88%}
+  .ar-experience-copy{font-size:12px;max-width:92%}
+  .ar-experience-steps{grid-template-columns:1fr;margin-top:20px}
+  .ar-step{border-right:0;border-bottom:1px solid var(--sc-line);padding:10px 0;margin:0}
+  .ar-step:last-child{border-bottom:0}
 }
 
 </style></head><body>
@@ -162,12 +204,12 @@ html,body{overflow-x:hidden}
 <section class="ar-experience-banner" aria-label="Experiencia 3D y realidad aumentada">
   <div class="ar-experience-inner">
     <div class="ar-experience-kicker">Experiencia inmersiva · Séptimo Cielo</div>
-    <h2 class="ar-experience-title">Descubre tu elección antes de pedir.</h2>
-    <p class="ar-experience-copy">Explora platos seleccionados en 3D y, desde un celular compatible, visualízalos directamente sobre tu mesa antes de elegir.</p>
+    <h2 class="ar-experience-title">Tu mesa. Tu elección. Antes de ordenar.</h2>
+    <p class="ar-experience-copy">Una nueva forma de descubrir la carta: explora platos seleccionados en 3D y visualízalos sobre tu mesa antes de hacer tu elección.</p>
     <div class="ar-experience-steps">
-      <span class="ar-step">01 · Elige un plato</span>
-      <span class="ar-step">02 · Explóralo en 3D</span>
-      <span class="ar-step">03 · Visualízalo en tu mesa</span>
+      <span class="ar-step">01 · Elige</span>
+      <span class="ar-step">02 · Explora en 3D</span>
+      <span class="ar-step">03 · Llévalo a tu mesa</span>
     </div>
   </div>
 </section>
@@ -213,7 +255,7 @@ Object.entries(officialMenu).forEach(([cat,arr],i)=>{const b=document.createElem
 tabs.onclick=e=>{const b=e.target.closest('[data-cat]');if(!b)return;tabs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');menu.querySelectorAll('.menu-category').forEach(x=>x.classList.toggle('active',x.dataset.section===b.dataset.cat))};
 const detail=document.getElementById('productDetail');
 function openProduct(cat,idx){const x=officialMenu[cat][idx], asset=arAssets[x[0]], visual=document.getElementById('detailVisual');document.getElementById('detailCategory').textContent=cat;document.getElementById('detailName').textContent=x[0];document.getElementById('detailPrice').textContent=x[1];document.getElementById('detailDesc').textContent=x[2];if(asset){visual.innerHTML=`<div class="detail-status">Experiencia 3D disponible</div>
-      <div class="ar-availability-pill">3D + AR disponible</div><div class="ar-first-tip">Gira el plato con un dedo. Cuando quieras verlo a escala en tu espacio, toca <b>Visualizar en tu mesa</b>.</div>
+      <div class="ar-availability-pill">Experiencia 3D · AR</div><div class="ar-first-tip">Explora cada detalle del plato en 3D. Para descubrirlo en tu espacio, selecciona <b>Visualizar en tu mesa</b>.</div>
       <model-viewer camera-orbit="${x[0]==='Tomahawk'?'0deg 65deg 175%':x[0]==='Chicharrones'?'0deg 62deg 118%':x[0]==='Spring Roll'?'0deg 65deg 120%':x[0]==='Focaccia Capresse'?'0deg 62deg 118%':x[0]==='Ensalada Séptimo Cielo'?'0deg 62deg 120%':x[0]==='Nachos de la Casa'?'0deg 62deg 122%':'0deg 65deg 105%'}" field-of-view="30deg" min-camera-orbit="${x[0]==='Tomahawk'?'auto auto 145%':x[0]==='Chicharrones'?'auto auto 95%':x[0]==='Spring Roll'?'auto auto 95%':x[0]==='Focaccia Capresse'?'auto auto 95%':x[0]==='Ensalada Séptimo Cielo'?'auto auto 96%':x[0]==='Nachos de la Casa'?'auto auto 98%':'auto auto 80%'}" max-camera-orbit="${x[0]==='Tomahawk'?'auto auto 230%':x[0]==='Chicharrones'?'auto auto 190%':x[0]==='Spring Roll'?'auto auto 190%':x[0]==='Focaccia Capresse'?'auto auto 190%':x[0]==='Ensalada Séptimo Cielo'?'auto auto 190%':x[0]==='Nachos de la Casa'?'auto auto 195%':'auto auto 160%'}" src="${asset.model}" poster="${asset.poster}" camera-controls touch-action="pan-y" ar ar-scale="fixed" ar-placement="floor" ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" shadow-intensity="1.2" shadow-softness="0.75" exposure="1.05" environment-image="neutral"><button slot="ar-button" class="arbtn">Visualizar en tu mesa</button></model-viewer>`;document.getElementById('detailNote').textContent='Visualización referencial para demostración comercial. El modelo final puede sustituirse por la digitalización autorizada del plato real.'}else{visual.innerHTML=`<div class="detail-placeholder"><div><b>${x[0]}</b><span>Este producto ya está preparado dentro de la arquitectura inmersiva. Su modelo 3D se incorporará aquí sin rediseñar la carta.</span></div></div>`;document.getElementById('detailNote').textContent='Ficha preparada para digitalización 3D. La carta mantiene la misma navegación y estructura para todos los productos.'}const related=officialMenu[cat].map((r,i)=>({r,i})).filter(o=>o.i!==idx).slice(0,4);document.getElementById('relatedRow').innerHTML=related.map(o=>`<button data-rel="${o.i}">${o.r[0]}</button>`).join('');document.getElementById('relatedRow').onclick=e=>{const b=e.target.closest('[data-rel]');if(b)openProduct(cat,+b.dataset.rel)};detail.classList.add('open');detail.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';history.replaceState(null,'',`#producto=${encodeURIComponent(x[0].toLowerCase().replaceAll(' ','-'))}`)}
 menu.onclick=e=>{const c=e.target.closest('.product-card');if(c)openProduct(c.dataset.category,+c.dataset.product)};
 document.getElementById('detailClose').onclick=()=>{detail.classList.remove('open');detail.setAttribute('aria-hidden','true');document.body.style.overflow='';history.replaceState(null,'','#carta')};
