@@ -30,3 +30,11 @@ La base física queda anclada en Y=0 para colocación sobre mesa.
 La geometría corregida de V8.4 se publica con un nombre de archivo nuevo
 (`ceviche-peruano-v85.glb`) y el HTML añade `?v=85`.
 Esto evita que Chrome/model-viewer/AR reutilicen el GLB invertido guardado en caché.
+
+## V8.6 — Tomahawk horizontal
+Tomahawk normalizado al mismo estándar que validó el Ceviche:
+- glTF/model-viewer Y-up
+- mesa = plano XZ
+- base física = Y=0
+- escala fija en AR
+- archivo versionado `tomahawk-v86.glb?v=86` para evitar caché del modelo anterior.
