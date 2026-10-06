@@ -53,3 +53,10 @@ Se aplica a todos los productos 3D actuales y a los futuros:
 
 ## V9.2
 Layout V9 restaurado. Solo Tomahawk usa cámara 155% para quedar dentro de la cuadrícula como el Ceviche. Sin cambios de tamaño o fondo del modal.
+
+## V9.3 — corrección móvil definitiva
+- La ficha de producto queda en una sola columna y exactamente dentro del viewport.
+- Se elimina el desplazamiento horizontal de toda la página/ficha.
+- Se conservan el ancho, fondo y estructura visual del Ceviche usado como referencia.
+- Tomahawk usa un encuadre propio más alejado (175%) para entrar completo dentro de la misma cuadrícula.
+- No se modifica la orientación ni el funcionamiento AR.
