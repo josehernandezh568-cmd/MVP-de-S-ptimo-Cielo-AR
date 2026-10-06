@@ -11,3 +11,9 @@ Se incorpora Ceviche Peruano como quinta experiencia 3D/AR demostrativa. Modelo 
 
 ## V8.1
 Ceviche Peruano corregido con materiales PBR visibles: pescado, aguacate, leche de tigre, chips, cebolla, cilantro y cerámica. Visor calibrado con entorno neutral, sombras y exposición.
+
+## V8.2 — Estándar de orientación AR
+- Todos los platos deben modelarse sobre el plano XY, con Z como altura.
+- La base inferior del plato se normaliza a Z=0 para apoyar sobre la superficie.
+- AR usa colocación horizontal (`ar-placement="floor"`) y escala fija.
+- El Ceviche Peruano fue normalizado con este estándar.
