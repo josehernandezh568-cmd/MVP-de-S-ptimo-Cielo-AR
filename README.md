@@ -81,3 +81,10 @@ La arquitectura móvil aprobada permanece intacta.
 
 ## V14 — Nachos de la Casa
 Décimo plato 3D + AR. Visualización referencial basada en la carta oficial. Se conserva íntegra la arquitectura móvil aprobada.
+
+## V15 — Experiencia Comercial
+Se conserva el catálogo aprobado de 10 modelos 3D/AR y se añade una capa de experiencia comercial:
+- explicación inmediata del flujo Elige → 3D → AR;
+- señalización “3D + AR disponible”;
+- instrucción contextual dentro del detalle del plato;
+- arquitectura, cámaras, orientación, escala AR y responsive previamente aprobados sin cambios.
