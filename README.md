@@ -69,3 +69,8 @@ Añade Chicharrones a 3D/AR con panceta por capas, papa criolla, guacamole, pico
 La V11 anterior insertó por error un objeto JavaScript antes del DOCTYPE, por eso el navegador mostraba código como texto.
 Esta versión parte nuevamente de la V10 aprobada e integra Spring Roll correctamente dentro de `arAssets`.
 La estructura, responsive móvil, Chicharrones y demás platos permanecen sin cambios.
+
+## V12 — Focaccia Capresse Gen 2
+Se incorpora Focaccia Capresse ($19.000) al sistema 3D + AR.
+Visualización referencial basada en la carta: focaccia crocante, mozzarella, tomates frescos, pesto, espejo de napolitana y reducción de balsámico.
+Se mantiene intacta la arquitectura móvil aprobada: una sola columna, sin desplazamiento horizontal, AR horizontal y cámara individual.

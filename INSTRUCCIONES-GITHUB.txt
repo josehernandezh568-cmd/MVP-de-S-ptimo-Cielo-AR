@@ -1,15 +1,5 @@
-REEMPLAZO LIMPIO EN GITHUB — SÉPTIMO CIELO V11.1
-
-Este ZIP reemplaza el contenido anterior del repositorio.
-
-PASOS:
-1. En el repositorio de GitHub elimina los archivos viejos/duplicados y confirma (Commit changes).
-2. Pulsa Add file > Upload files.
-3. Abre este ZIP en tu PC y arrastra TODOS LOS ARCHIVOS DE ADENTRO a GitHub.
-4. No subas la carpeta contenedora: index.html debe quedar directamente en la raíz.
-5. Pulsa Commit changes.
-6. Espera a que GitHub Pages termine el despliegue.
-7. Abre la página y haz una recarga completa.
-
-A partir de esta versión no mezcles archivos de V8, V9 o V10.
-Cada nueva entrega será un paquete completo para sustituir el anterior.
+SÉPTIMO CIELO V12 — REPOSITORIO COMPLETO
+Este ZIP ya contiene TODO el repositorio vigente.
+Reemplaza el contenido anterior por los archivos de este paquete.
+No mezcles archivos de versiones anteriores.
+index.html debe quedar directamente en la raíz del repositorio.
