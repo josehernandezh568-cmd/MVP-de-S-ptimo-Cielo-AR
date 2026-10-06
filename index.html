@@ -13,6 +13,44 @@
 /* V8 · catálogo unificado + Ceviche Peruano 3D/AR */
 .product-list{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:12px}.product-card{background:var(--paper);padding:22px;display:grid;grid-template-columns:1fr auto;gap:18px;cursor:pointer;transition:.22s;position:relative}.product-card:hover{background:#f3ede2}.product-card h4{font:600 24px 'Cormorant Garamond',serif;margin:0 0 6px}.product-card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0;max-width:720px}.product-card strong{font:500 18px 'Cormorant Garamond',serif;white-space:nowrap}.product-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.chip{font-size:7.5px;letter-spacing:.14em;text-transform:uppercase;border:1px solid #d4cabd;padding:6px 8px}.chip.ar{background:#171714;color:#f4eee4;border-color:#171714}.product-detail{display:none;position:fixed;inset:0;z-index:80;background:#0d0d0bf5;color:#f4eee4;overflow:auto}.product-detail.open{display:block}.detail-inner{max-width:1050px;margin:auto;padding:26px 20px 70px}.detail-top{display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;padding:14px 0;background:#0d0d0be8;backdrop-filter:blur(12px);z-index:4}.detail-top button{background:none;border:0;color:#fff;font-size:24px;cursor:pointer}.detail-category{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper)}.detail-grid{display:grid;gap:30px;margin-top:25px}.detail-visual{min-height:470px;background:radial-gradient(circle,#302b24,#111 68%);border:1px solid #302e29;position:relative;overflow:hidden}.detail-visual model-viewer{height:100%;min-height:470px}.detail-placeholder{height:100%;min-height:470px;display:grid;place-items:center;text-align:center;padding:40px;background:linear-gradient(145deg,#211d18,#0d0d0b)}.detail-placeholder b{font:500 42px 'Cormorant Garamond',serif;display:block}.detail-placeholder span{font-size:10px;line-height:1.8;color:#aaa49b;display:block;max-width:420px;margin-top:12px}.detail-copy h2{font:500 clamp(45px,7vw,72px)/.95 'Cormorant Garamond',serif;margin:8px 0 10px}.detail-price{font:500 27px 'Cormorant Garamond',serif;color:#d5a276}.detail-copy p{font-size:14px;line-height:1.85;color:#bdb5aa}.detail-note{border-top:1px solid #34312b;margin-top:25px;padding-top:18px;font-size:9px;line-height:1.7;color:#817b72}.related{margin-top:34px}.related h3{font:500 29px 'Cormorant Garamond',serif}.related-row{display:flex;gap:9px;overflow:auto}.related-row button{background:#171714;color:#eee7dc;border:1px solid #38342e;padding:12px 14px;white-space:nowrap;font:500 15px 'Cormorant Garamond',serif;cursor:pointer}.catalog-note{margin:18px 0 0;font-size:11px;color:var(--muted);line-height:1.7}.arbtn[hidden]{display:none}.detail-status{position:absolute;left:16px;top:16px;z-index:3;background:#0d0d0bcc;color:#fff;padding:8px 10px;font-size:7px;letter-spacing:.16em;text-transform:uppercase}
 @media(min-width:760px){.product-list{grid-template-columns:1fr 1fr}.detail-grid{grid-template-columns:1.2fr .8fr;align-items:center}.product-card{min-height:155px}.menu-row p,.product-card p{font-size:14px}.navlinks a,.tabs button{font-size:10px}.story p,.celebrate p,.social p,.map-card p{font-size:15px}}
+
+/* V9.0 — estándar universal Séptimo Cielo 3D/AR */
+.product-visual model-viewer,
+.product-modal model-viewer,
+model-viewer.product-model,
+#productViewer,
+#viewer3d {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: clamp(320px, 48vw, 520px) !important;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .product-visual,
+  .product-modal,
+  .product-modal__visual,
+  .modal-visual,
+  .modal-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .product-visual model-viewer,
+  .product-modal model-viewer,
+  model-viewer.product-model,
+  #productViewer,
+  #viewer3d {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: min(56vh, 390px) !important;
+    min-height: 300px !important;
+  }
+}
+
 </style></head><body>
 <section class="splash"><div class="hero"><p class="brand">SEP<span class="seven">7</span>IMO CIELO</p><p class="eyebrow">Experiencia gastronómica</p><h1>Descubre<br>antes de elegir.</h1><p class="copy">Explora nuestra carta desde una nueva perspectiva. Observa cada detalle y visualiza tu elección directamente sobre tu mesa.</p><a class="btn" href="#carta">Descubrir la carta <span>→</span></a><div class="location">Bogotá · Castilla</div></div></section>
 <main id="carta" class="menu"><div class="top"><div class="mini">SEP<span class="seven">7</span>IMO CIELO</div><nav class="navlinks"><a href="#carta">Carta</a><a href="#historia">Experiencia</a><a href="#ubicacion">Ubicación</a><a href="#redes">Redes</a></nav></div><h2>Elige. Explora. Descubre.</h2><p class="intro">Una sola carta, una sola experiencia. Entra a cualquier producto para conocerlo; cuando su digitalización 3D esté disponible podrás girarlo y llevarlo a tu mesa en realidad aumentada.</p><div class="tabs" id="officialTabs"></div><div id="officialMenu" class="official-menu"></div><p class="catalog-note">Los modelos 3D se descargan únicamente al abrir el producto, manteniendo la carta ligera y rápida.</p></main>
@@ -27,11 +65,11 @@
 <div class="foot">Séptimo Cielo · Carta inmersiva · Castilla, Bogotá</div>
 <script>
 const arAssets={
-'Tomahawk':{model:'tomahawk-v86.glb?v=86',poster:'tomahawk-demo.jpg?v=86'},
-'De Tocino':{model:'hamburguesa-tocino-demo.glb',poster:'hamburguesa-tocino-demo.jpg'},
-'Costillas de Cerdo BBQ':{model:'costillas-bbq-demo.glb',poster:'costillas-bbq-demo.jpg'},
-'Mar y Tierra':{model:'mar-y-tierra-demo.glb',poster:'mar-y-tierra-demo.jpg'},
-'Ceviche Peruano':{model:'ceviche-peruano-v85.glb?v=85',poster:'ceviche-peruano-demo.jpg?v=85'}
+'Tomahawk':{model:'tomahawk-v90.glb?v=90',poster:'tomahawk-demo.jpg?v=86'},
+'De Tocino':{model:'hamburguesa-tocino-v90.glb?v=90',poster:'hamburguesa-tocino-demo.jpg'},
+'Costillas de Cerdo BBQ':{model:'costillas-bbq-v90.glb?v=90',poster:'costillas-bbq-demo.jpg'},
+'Mar y Tierra':{model:'mar-y-tierra-v90.glb?v=90',poster:'mar-y-tierra-demo.jpg'},
+'Ceviche Peruano':{model:'ceviche-peruano-v90.glb?v=90',poster:'ceviche-peruano-demo.jpg?v=85'}
 };
 const officialMenu={
 'Entradas':[
@@ -51,7 +89,7 @@ const tabs=document.getElementById('officialTabs'), menu=document.getElementById
 Object.entries(officialMenu).forEach(([cat,arr],i)=>{const b=document.createElement('button');b.textContent=cat;b.dataset.cat=cat;if(!i)b.className='active';tabs.appendChild(b);const sec=document.createElement('section');sec.className='menu-category'+(!i?' active':'');sec.dataset.section=cat;sec.innerHTML=`<div class="category-head"><h3>${cat}</h3><span>${arr.length} opciones</span></div><div class="product-list">`+arr.map((x,j)=>{const has=!!arAssets[x[0]];return `<article class="product-card" data-product="${j}" data-category="${cat}"><div><h4>${x[0]}</h4><p>${x[2]}</p><div class="product-meta"><span class="chip">Ver detalle</span>${has?'<span class="chip ar">3D + AR</span>':''}</div></div><strong>${x[1]}</strong></article>`}).join('')+'</div>';menu.appendChild(sec)});
 tabs.onclick=e=>{const b=e.target.closest('[data-cat]');if(!b)return;tabs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');menu.querySelectorAll('.menu-category').forEach(x=>x.classList.toggle('active',x.dataset.section===b.dataset.cat))};
 const detail=document.getElementById('productDetail');
-function openProduct(cat,idx){const x=officialMenu[cat][idx], asset=arAssets[x[0]], visual=document.getElementById('detailVisual');document.getElementById('detailCategory').textContent=cat;document.getElementById('detailName').textContent=x[0];document.getElementById('detailPrice').textContent=x[1];document.getElementById('detailDesc').textContent=x[2];if(asset){visual.innerHTML=`<div class="detail-status">Experiencia 3D disponible</div><model-viewer src="${asset.model}" poster="${asset.poster}" camera-controls touch-action="pan-y" ar ar-scale="fixed" ar-placement="floor" ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" shadow-intensity="1.2" shadow-softness="0.75" exposure="1.05" environment-image="neutral"><button slot="ar-button" class="arbtn">Visualizar en tu mesa</button></model-viewer>`;document.getElementById('detailNote').textContent='Visualización referencial para demostración comercial. El modelo final puede sustituirse por la digitalización autorizada del plato real.'}else{visual.innerHTML=`<div class="detail-placeholder"><div><b>${x[0]}</b><span>Este producto ya está preparado dentro de la arquitectura inmersiva. Su modelo 3D se incorporará aquí sin rediseñar la carta.</span></div></div>`;document.getElementById('detailNote').textContent='Ficha preparada para digitalización 3D. La carta mantiene la misma navegación y estructura para todos los productos.'}const related=officialMenu[cat].map((r,i)=>({r,i})).filter(o=>o.i!==idx).slice(0,4);document.getElementById('relatedRow').innerHTML=related.map(o=>`<button data-rel="${o.i}">${o.r[0]}</button>`).join('');document.getElementById('relatedRow').onclick=e=>{const b=e.target.closest('[data-rel]');if(b)openProduct(cat,+b.dataset.rel)};detail.classList.add('open');detail.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';history.replaceState(null,'',`#producto=${encodeURIComponent(x[0].toLowerCase().replaceAll(' ','-'))}`)}
+function openProduct(cat,idx){const x=officialMenu[cat][idx], asset=arAssets[x[0]], visual=document.getElementById('detailVisual');document.getElementById('detailCategory').textContent=cat;document.getElementById('detailName').textContent=x[0];document.getElementById('detailPrice').textContent=x[1];document.getElementById('detailDesc').textContent=x[2];if(asset){visual.innerHTML=`<div class="detail-status">Experiencia 3D disponible</div><model-viewer camera-orbit="0deg 65deg 105%" field-of-view="30deg" min-camera-orbit="auto auto 80%" max-camera-orbit="auto auto 160%" src="${asset.model}" poster="${asset.poster}" camera-controls touch-action="pan-y" ar ar-scale="fixed" ar-placement="floor" ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" shadow-intensity="1.2" shadow-softness="0.75" exposure="1.05" environment-image="neutral"><button slot="ar-button" class="arbtn">Visualizar en tu mesa</button></model-viewer>`;document.getElementById('detailNote').textContent='Visualización referencial para demostración comercial. El modelo final puede sustituirse por la digitalización autorizada del plato real.'}else{visual.innerHTML=`<div class="detail-placeholder"><div><b>${x[0]}</b><span>Este producto ya está preparado dentro de la arquitectura inmersiva. Su modelo 3D se incorporará aquí sin rediseñar la carta.</span></div></div>`;document.getElementById('detailNote').textContent='Ficha preparada para digitalización 3D. La carta mantiene la misma navegación y estructura para todos los productos.'}const related=officialMenu[cat].map((r,i)=>({r,i})).filter(o=>o.i!==idx).slice(0,4);document.getElementById('relatedRow').innerHTML=related.map(o=>`<button data-rel="${o.i}">${o.r[0]}</button>`).join('');document.getElementById('relatedRow').onclick=e=>{const b=e.target.closest('[data-rel]');if(b)openProduct(cat,+b.dataset.rel)};detail.classList.add('open');detail.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';history.replaceState(null,'',`#producto=${encodeURIComponent(x[0].toLowerCase().replaceAll(' ','-'))}`)}
 menu.onclick=e=>{const c=e.target.closest('.product-card');if(c)openProduct(c.dataset.category,+c.dataset.product)};
 document.getElementById('detailClose').onclick=()=>{detail.classList.remove('open');detail.setAttribute('aria-hidden','true');document.body.style.overflow='';history.replaceState(null,'','#carta')};
 detail.addEventListener('click',e=>{if(e.target===detail)document.getElementById('detailClose').click()});

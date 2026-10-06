@@ -38,3 +38,14 @@ Tomahawk normalizado al mismo estándar que validó el Ceviche:
 - base física = Y=0
 - escala fija en AR
 - archivo versionado `tomahawk-v86.glb?v=86` para evitar caché del modelo anterior.
+
+## V9.0 — Estándar universal para todos los platos 3D/AR
+Se aplica a todos los productos 3D actuales y a los futuros:
+- glTF/model-viewer Y-up.
+- Mesa = plano XZ.
+- Base física = Y=0.
+- AR horizontal y escala física fija.
+- Archivo GLB versionado para evitar caché.
+- Todos los visores usan el mismo encuadre/cámara.
+- En móvil el visor queda limitado al ancho de pantalla y a una altura responsive máxima.
+- El tamaño visual del visor se estandariza sin falsear el tamaño físico real de cada plato en AR.
