@@ -49,3 +49,12 @@ Se aplica a todos los productos 3D actuales y a los futuros:
 - Todos los visores usan el mismo encuadre/cámara.
 - En móvil el visor queda limitado al ancho de pantalla y a una altura responsive máxima.
 - El tamaño visual del visor se estandariza sin falsear el tamaño físico real de cada plato en AR.
+
+## V9.1 — Corrección móvil
+La captura real de iPhone mostró dos problemas: el visor era demasiado alto y el encuadre 105% recortaba platos anchos como Tomahawk.
+Se corrige globalmente:
+- visor móvil 1:1, limitado al ancho real del viewport;
+- altura máxima 390 px;
+- cámara inicial 135% para dejar margen alrededor del plato;
+- zoom mínimo 105% para impedir encuadres excesivamente cerrados;
+- mismas reglas para todos los platos actuales y futuros.
