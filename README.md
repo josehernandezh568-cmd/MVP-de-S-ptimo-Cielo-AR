@@ -65,7 +65,7 @@ Layout V9 restaurado. Solo Tomahawk usa cámara 155% para quedar dentro de la cu
 ## V10 — Chicharrones 3D Gen 2
 Añade Chicharrones a 3D/AR con panceta por capas, papa criolla, guacamole, pico de gallo y ají. Mantiene el estándar móvil V9.3 sin scroll horizontal y AR Y-up/floor/fixed. Modelo referencial de demostración; sustituible por digitalización del plato real.
 
-## V11 — Spring Roll Gen 2
-Nuevo plato 3D/AR: Spring Roll ($24.000).
-Representación referencial: 8 rollitos, cuatro con acento vegetal y cuatro de pollo, acompañados de chili sauce.
-Mantiene intacto el estándar móvil aprobado en V10/V9.3: una sola columna, sin scroll horizontal, Y-up, base Y=0 y AR horizontal.
+## V11.1 — Spring Roll corregido
+La V11 anterior insertó por error un objeto JavaScript antes del DOCTYPE, por eso el navegador mostraba código como texto.
+Esta versión parte nuevamente de la V10 aprobada e integra Spring Roll correctamente dentro de `arAssets`.
+La estructura, responsive móvil, Chicharrones y demás platos permanecen sin cambios.
