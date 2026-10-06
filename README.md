@@ -78,3 +78,6 @@ Se mantiene intacta la arquitectura móvil aprobada: una sola columna, sin despl
 ## V13 — Ensalada Séptimo Cielo Gen 2
 Se incorpora Ensalada Séptimo Cielo ($19.000) al sistema 3D + AR: mix de lechugas asiáticas, tomates cherry, bocconcini, pesto y reducción de balsámico. Visualización referencial.
 La arquitectura móvil aprobada permanece intacta.
+
+## V14 — Nachos de la Casa
+Décimo plato 3D + AR. Visualización referencial basada en la carta oficial. Se conserva íntegra la arquitectura móvil aprobada.
