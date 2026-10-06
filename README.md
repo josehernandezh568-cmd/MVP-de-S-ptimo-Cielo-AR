@@ -25,3 +25,8 @@ La rotación del Ceviche se hornea dentro del GLB para corregir la diferencia de
 V8.3 dejó el plato en el plano horizontal correcto XZ, pero con la normal hacia -Y, por eso se veía de cabeza.
 V8.4 gira el modelo 180° sobre X para que la comida mire hacia +Y, que es el eje vertical de glTF/model-viewer.
 La base física queda anclada en Y=0 para colocación sobre mesa.
+
+## V8.5 — Cache bust del modelo 3D
+La geometría corregida de V8.4 se publica con un nombre de archivo nuevo
+(`ceviche-peruano-v85.glb`) y el HTML añade `?v=85`.
+Esto evita que Chrome/model-viewer/AR reutilicen el GLB invertido guardado en caché.
