@@ -74,3 +74,7 @@ La estructura, responsive móvil, Chicharrones y demás platos permanecen sin ca
 Se incorpora Focaccia Capresse ($19.000) al sistema 3D + AR.
 Visualización referencial basada en la carta: focaccia crocante, mozzarella, tomates frescos, pesto, espejo de napolitana y reducción de balsámico.
 Se mantiene intacta la arquitectura móvil aprobada: una sola columna, sin desplazamiento horizontal, AR horizontal y cámara individual.
+
+## V13 — Ensalada Séptimo Cielo Gen 2
+Se incorpora Ensalada Séptimo Cielo ($19.000) al sistema 3D + AR: mix de lechugas asiáticas, tomates cherry, bocconcini, pesto y reducción de balsámico. Visualización referencial.
+La arquitectura móvil aprobada permanece intacta.
