@@ -17,3 +17,6 @@ Ceviche Peruano corregido con materiales PBR visibles: pescado, aguacate, leche 
 - La base inferior del plato se normaliza a Z=0 para apoyar sobre la superficie.
 - AR usa colocación horizontal (`ar-placement="floor"`) y escala fija.
 - El Ceviche Peruano fue normalizado con este estándar.
+
+## V8.3 — Corrección de orientación nativa
+La rotación del Ceviche se hornea dentro del GLB para corregir la diferencia de ejes entre el visor web y los visores AR nativos. Se mantiene colocación sobre superficie horizontal y escala fija.
