@@ -20,3 +20,8 @@ Ceviche Peruano corregido con materiales PBR visibles: pescado, aguacate, leche 
 
 ## V8.3 — Corrección de orientación nativa
 La rotación del Ceviche se hornea dentro del GLB para corregir la diferencia de ejes entre el visor web y los visores AR nativos. Se mantiene colocación sobre superficie horizontal y escala fija.
+
+## V8.4 — Corrección definitiva de cara superior
+V8.3 dejó el plato en el plano horizontal correcto XZ, pero con la normal hacia -Y, por eso se veía de cabeza.
+V8.4 gira el modelo 180° sobre X para que la comida mire hacia +Y, que es el eje vertical de glTF/model-viewer.
+La base física queda anclada en Y=0 para colocación sobre mesa.
