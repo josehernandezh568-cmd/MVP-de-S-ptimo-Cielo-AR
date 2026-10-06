@@ -1,5 +1,4 @@
-SÉPTIMO CIELO V16 — REDISEÑO PREMIUM
-Este ZIP contiene el repositorio completo.
-Reemplaza el contenido anterior por TODOS los archivos de este paquete.
-No mezcles versiones. index.html debe quedar directamente en la raíz.
-Los 10 modelos 3D/AR aprobados permanecen intactos.
+SÉPTIMO CIELO V17 — EDITORIAL LUXURY
+Repositorio completo. Reemplaza el contenido anterior por TODOS los archivos de este ZIP.
+No mezcles versiones. index.html debe quedar en la raíz.
+Los 10 modelos 3D/AR y su comportamiento aprobado permanecen intactos.

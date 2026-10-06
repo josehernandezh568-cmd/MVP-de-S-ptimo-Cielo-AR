@@ -93,3 +93,8 @@ Se conserva el catálogo aprobado de 10 modelos 3D/AR y se añade una capa de ex
 Dirección de arte refinada para integrar la experiencia 3D/AR con la identidad editorial del sitio:
 marfil, tinta, cobre, serif, líneas finas y mayor aire visual. Se elimina el bloque negro de V15.
 Los 10 modelos, cámaras, escala, AR y comportamiento móvil permanecen intactos.
+
+## V17 — Editorial Luxury
+Profundización visual de la identidad Séptimo Cielo sin alterar la arquitectura funcional:
+ritmo editorial, detalles cobre, microinteracciones, navegación refinada, tarjetas con respuesta sutil,
+mayor profundidad en el visor 3D y recursos tipográficos de marca. Los 10 modelos y AR permanecen intactos.

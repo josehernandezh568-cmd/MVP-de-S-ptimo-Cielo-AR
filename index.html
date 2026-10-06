@@ -198,6 +198,110 @@ html,body{overflow-x:hidden}
   .ar-step:last-child{border-bottom:0}
 }
 
+
+/* V17 — Séptimo Cielo Editorial Luxury */
+html{scroll-behavior:smooth}
+body{background:#f5f0e7;color:#171512}
+::selection{background:rgba(184,109,63,.22)}
+/* richer editorial rhythm */
+.wrap,.in{position:relative}
+header,.hero{position:relative}
+header:after{
+ content:"";position:absolute;left:50%;bottom:0;width:min(1180px,calc(100% - 40px));
+ height:1px;background:linear-gradient(90deg,transparent,rgba(65,49,38,.22),transparent);
+ transform:translateX(-50%);
+}
+.hero:after{
+ content:"SÉPTIMO CIELO";position:absolute;right:3vw;bottom:2vh;
+ font-family:Georgia,serif;font-size:clamp(46px,9vw,150px);letter-spacing:-.06em;
+ color:rgba(245,240,231,.055);pointer-events:none;white-space:nowrap;
+}
+.ar-experience-inner{max-width:950px}
+.ar-experience-title{max-width:720px}
+.ar-experience-copy{font-size:14px}
+/* navigation refinement */
+nav a,.nav a{position:relative}
+nav a:after,.nav a:after{
+ content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:#b86d3f;
+ transition:right .28s ease;
+}
+nav a:hover:after,.nav a:hover:after{right:0}
+/* category bar feels like an editorial index */
+.tabs,.categories,.category-tabs{
+ scrollbar-width:none;
+}
+.tabs::-webkit-scrollbar,.categories::-webkit-scrollbar,.category-tabs::-webkit-scrollbar{display:none}
+.tabs button,.categories button,.category-tabs button{
+ transition:transform .22s ease,opacity .22s ease,color .22s ease;
+}
+.tabs button:hover,.categories button:hover,.category-tabs button:hover{transform:translateY(-1px)}
+/* cards: subtle premium interaction without changing layout */
+.card,.menu-card,.product-card{
+ position:relative;transition:transform .28s ease,box-shadow .28s ease,background .28s ease;
+}
+.card:hover,.menu-card:hover,.product-card:hover{
+ transform:translateY(-3px);box-shadow:0 14px 35px rgba(36,26,19,.07);
+ background:rgba(255,255,255,.24);
+}
+.card:after,.menu-card:after,.product-card:after{
+ content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:#b86d3f;
+ transition:right .32s ease;
+}
+.card:hover:after,.menu-card:hover:after,.product-card:hover:after{right:0}
+/* section headings */
+section h2{letter-spacing:-.025em}
+section h2:where(:not(.ar-experience-title)){text-wrap:balance}
+/* immersive content blocks */
+.about,.experience,.celebrations,.location-section{
+ position:relative;isolation:isolate;
+}
+.about:before,.experience:before,.location-section:before{
+ content:"07";position:absolute;right:4%;top:4%;
+ font-family:Georgia,serif;font-size:clamp(70px,12vw,190px);
+ color:rgba(184,109,63,.035);z-index:-1;line-height:1;
+}
+/* detail/modal luxury polish */
+.product-detail{backdrop-filter:blur(10px)}
+.detail-inner{position:relative}
+.detail-inner:before{
+ content:"SÉPTIMO CIELO";display:block;font-size:9px;letter-spacing:.24em;
+ text-transform:uppercase;color:#b86d3f;margin-bottom:14px;
+}
+.detail-visual{
+ border:1px solid rgba(255,255,255,.09);
+ box-shadow:0 24px 60px rgba(0,0,0,.22);
+}
+.detail-visual model-viewer{background:radial-gradient(circle at 50% 38%,#292724 0,#171614 52%,#0d0d0c 100%)}
+.arbtn{
+ letter-spacing:.10em!important;text-transform:uppercase!important;
+ box-shadow:0 10px 26px rgba(0,0,0,.18)!important;
+}
+/* floating social controls */
+.floating-social a{
+ transition:transform .2s ease,box-shadow .2s ease;
+ box-shadow:0 8px 20px rgba(0,0,0,.10);
+}
+.floating-social a:hover{transform:translateY(-2px)}
+/* reveal animation, restrained */
+@keyframes scReveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ar-experience-inner{animation:scReveal .7s ease both}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .ar-experience-inner{animation:none}
+ *{transition:none!important}
+}
+@media(max-width:759px){
+ .hero:after{font-size:58px;right:18px;bottom:16px}
+ .ar-experience-inner{max-width:none}
+ .card:hover,.menu-card:hover,.product-card:hover{transform:none;box-shadow:none}
+ .about:before,.experience:before,.location-section:before{font-size:90px}
+}
+
+
+.sc-editorial-divider{max-width:1180px;margin:12px auto 34px;padding:0 22px;display:flex;align-items:center;gap:14px;color:#b86d3f}
+.sc-editorial-divider:before,.sc-editorial-divider:after{content:"";height:1px;flex:1;background:rgba(65,49,38,.14)}
+.sc-editorial-divider span{font-size:9px;opacity:.75}
+
 </style></head><body>
 <section class="splash"><div class="hero"><p class="brand">SEP<span class="seven">7</span>IMO CIELO</p><p class="eyebrow">Experiencia gastronómica</p><h1>Descubre<br>antes de elegir.</h1><p class="copy">Explora nuestra carta desde una nueva perspectiva. Observa cada detalle y visualiza tu elección directamente sobre tu mesa.</p><a class="btn" href="#carta">Descubrir la carta <span>→</span></a><div class="location">Bogotá · Castilla</div></div></section>
 
@@ -212,7 +316,7 @@ html,body{overflow-x:hidden}
       <span class="ar-step">03 · Llévalo a tu mesa</span>
     </div>
   </div>
-</section>
+</section><div class="sc-editorial-divider" aria-hidden="true"><span>✦</span></div>
 <main id="carta" class="menu"><div class="top"><div class="mini">SEP<span class="seven">7</span>IMO CIELO</div><nav class="navlinks"><a href="#carta">Carta</a><a href="#historia">Experiencia</a><a href="#ubicacion">Ubicación</a><a href="#redes">Redes</a></nav></div><h2>Elige. Explora. Descubre.</h2><p class="intro">Una sola carta, una sola experiencia. Entra a cualquier producto para conocerlo; cuando su digitalización 3D esté disponible podrás girarlo y llevarlo a tu mesa en realidad aumentada.</p><div class="tabs" id="officialTabs"></div><div id="officialMenu" class="official-menu"></div><p class="catalog-note">Los modelos 3D se descargan únicamente al abrir el producto, manteniendo la carta ligera y rápida.</p></main>
 <section id="productDetail" class="product-detail" aria-hidden="true"><div class="detail-inner"><div class="detail-top"><div class="mini">SEP<span class="seven">7</span>IMO CIELO</div><button id="detailClose" aria-label="Cerrar">×</button></div><div class="detail-grid"><div id="detailVisual" class="detail-visual"></div><div class="detail-copy"><div id="detailCategory" class="detail-category"></div><h2 id="detailName"></h2><div id="detailPrice" class="detail-price"></div><p id="detailDesc"></p><div id="detailActions"></div><div id="detailNote" class="detail-note"></div><div class="related"><h3>También podría gustarte</h3><div id="relatedRow" class="related-row"></div></div></div></div></div></section><section id="historia" class="story"><div class="story-inner"><div><div class="story-kicker">Bogotá · Castilla</div><h2>Un lugar para sentirse plenamente a gusto.</h2><p>Séptimo Cielo reúne gastronomía, ambiente y servicio en un espacio pensado tanto para una comida tranquila como para una celebración especial. Nuestra experiencia inmersiva extiende esa sensación a la carta: primero descubres, luego exploras y finalmente lo llevas a tu mesa.</p><div class="quote">“Estar en el séptimo cielo” es sentirse feliz, cómodo y plenamente a gusto.</div><div class="pillars"><div class="pillar"><b>Gastronomía</b><p>Carnes, pescados, mariscos, arroces, pastas, hamburguesas, bebidas y coctelería.</p></div><div class="pillar"><b>Ambiente</b><p>Espacios amplios, cálidos y versátiles para compartir con calma.</p></div><div class="pillar"><b>Celebraciones</b><p>Momentos especiales acompañados de ambientación, detalle y servicio.</p></div></div></div><div class="story-photo"><span>Conoce nuestras instalaciones</span></div></div></section>
 <section class="celebrate"><div class="celebrate-inner"><div class="story-kicker">Celebremos juntos</div><h2>Los grandes momentos también tienen mesa.</h2><p>La experiencia de Séptimo Cielo también está pensada para fechas especiales. Integramos esta faceta del restaurante para que la carta inmersiva no sea solo un menú: también sea una puerta de entrada a todo lo que se puede vivir en el lugar.</p><div class="occasion"><span>Cumpleaños</span><span>Grados</span><span>Matrimonios</span><span>15 años</span><span>Bautizos</span><span>Primeras comuniones</span></div></div></section>
