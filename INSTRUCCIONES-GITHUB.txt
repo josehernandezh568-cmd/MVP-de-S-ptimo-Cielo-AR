@@ -1,4 +1,4 @@
-SÉPTIMO CIELO V18 — SIGNATURE EXPERIENCE
-Repositorio completo. Reemplaza el contenido anterior por TODOS los archivos de este ZIP.
+SÉPTIMO CIELO V19 — RESTAURANT FIRST
+Repositorio completo. Reemplaza el contenido anterior por TODOS los archivos del ZIP.
 No mezcles versiones. index.html debe quedar directamente en la raíz.
-Incluye la corrección visual del visor 3D y conserva los 10 modelos/AR aprobados.
+Los 10 modelos 3D/AR, orientación, cámaras y responsive aprobado permanecen intactos.

@@ -102,3 +102,9 @@ mayor profundidad en el visor 3D y recursos tipográficos de marca. Los 10 model
 ## V18 — Signature Experience
 Corrección del visor señalada en revisión: se elimina la doble etiqueta superpuesta y se crea una jerarquía limpia.
 El detalle del plato recibe un tratamiento más gastronómico/editorial, manteniendo los 10 modelos y toda la lógica AR.
+
+## V19 — Restaurant First
+Evolución visual integral: la gastronomía y la identidad del restaurante pasan al frente,
+mientras 3D/AR funciona como sorpresa premium. Se refuerzan jerarquía editorial, carta,
+secciones de ambiente, profundidad, microinteracciones y detalle de producto.
+Los 10 modelos y la arquitectura AR aprobada permanecen intactos.

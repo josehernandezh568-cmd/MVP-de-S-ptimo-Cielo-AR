@@ -355,6 +355,130 @@ section h2:where(:not(.ar-experience-title)){text-wrap:balance}
  .ar-first-tip{top:50px!important;left:12px!important;right:12px!important;font-size:9px!important}
 }
 
+
+/* V19 — RESTAURANT FIRST / SIGNATURE EDITORIAL */
+:root{
+ --sc-paper:#f5f0e7;--sc-paper2:#eee6da;--sc-ink:#171512;
+ --sc-copper:#b76c3d;--sc-brown:#6c4a36;--sc-rule:rgba(54,39,29,.16);
+}
+body{
+ background:
+ radial-gradient(circle at 8% 18%,rgba(183,108,61,.035),transparent 22%),
+ linear-gradient(180deg,#f6f1e9 0,#f3ede4 100%);
+}
+main,.menu{position:relative}
+/* Main menu becomes a luxury editorial catalogue */
+.menu:before,main:before{
+ content:"CARTA";position:absolute;right:3.5vw;top:4.5rem;
+ font-family:Georgia,serif;font-size:clamp(72px,13vw,190px);line-height:.8;
+ color:rgba(183,108,61,.028);letter-spacing:-.07em;pointer-events:none;
+}
+.section-title,.menu h2{
+ position:relative;
+}
+.section-title:before,.menu h2:before{
+ content:"";display:inline-block;width:28px;height:1px;background:var(--sc-copper);
+ vertical-align:middle;margin:0 12px 5px 0;
+}
+/* Product rows/cards */
+.card,.menu-card,.product-card{
+ isolation:isolate;overflow:hidden;
+ border-color:rgba(54,39,29,.14)!important;
+}
+.card:before,.menu-card:before,.product-card:before{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(120deg,rgba(255,255,255,.32),transparent 38%);
+ opacity:0;transition:opacity .28s ease;z-index:-1;
+}
+.card:hover:before,.menu-card:hover:before,.product-card:hover:before{opacity:1}
+.card h3,.menu-card h3,.product-card h3{
+ font-family:Georgia,serif;letter-spacing:-.02em;
+}
+.price,.card-price,.product-price{color:var(--sc-copper)!important}
+/* AR capable products feel exclusive rather than technical */
+.card button,.menu-card button,.product-card button{
+ letter-spacing:.09em;text-transform:uppercase;
+}
+.card button:hover,.menu-card button:hover,.product-card button:hover{
+ border-color:rgba(183,108,61,.55)!important;
+}
+/* Experience statement */
+.ar-experience-banner{margin-top:34px}
+.ar-experience-inner{
+ display:grid;grid-template-columns:minmax(0,1.45fr) minmax(240px,.55fr);
+ column-gap:52px;align-items:end;max-width:none;
+}
+.ar-experience-kicker,.ar-experience-title,.ar-experience-copy{grid-column:1}
+.ar-experience-steps{
+ grid-column:2;grid-row:1/5;display:flex!important;flex-direction:column;
+ border-top:0!important;border-left:1px solid var(--sc-rule);padding-left:26px;
+ margin:0!important;max-width:none!important;
+}
+.ar-step{
+ border-right:0!important;border-bottom:1px solid var(--sc-rule);
+ margin:0!important;padding:14px 0!important;
+}
+.ar-step:first-child{padding-top:0!important}
+.ar-step:last-child{border-bottom:0}
+/* About/location visual blocks: stronger asymmetry and framing */
+.about img,.location-section img,.experience img{
+ box-shadow:18px 18px 0 rgba(183,108,61,.065),0 24px 55px rgba(42,30,22,.10);
+}
+.about img:hover,.location-section img:hover,.experience img:hover{
+ transform:translateY(-2px);transition:transform .35s ease;
+}
+/* Dark celebrations area: richer, less flat */
+.celebrations,.experience-dark{
+ background:
+ radial-gradient(circle at 78% 25%,rgba(183,108,61,.11),transparent 26%),
+ linear-gradient(135deg,#201c18,#151412)!important;
+}
+.celebrations h2,.experience-dark h2{letter-spacing:-.035em}
+/* Detail view becomes the signature moment */
+.product-detail{
+ background:
+ radial-gradient(circle at 75% 18%,rgba(183,108,61,.07),transparent 24%),
+ #11110f!important;
+}
+.detail-top{
+ border-bottom:1px solid rgba(255,255,255,.07)!important;
+}
+.detail-visual{
+ border-radius:2px!important;
+ box-shadow:0 30px 80px rgba(0,0,0,.30)!important;
+}
+.detail-copy{padding-top:20px}
+.detail-copy h2{font-size:clamp(42px,5vw,72px)!important;line-height:.96!important}
+.detail-copy .price,.detail-price{font-family:Georgia,serif;color:#d49a6a!important}
+.related-row button{
+ border-radius:0!important;padding:13px 16px!important;
+ background:rgba(255,255,255,.018)!important;
+}
+/* Elegant footer cadence */
+footer{position:relative}
+footer:before{
+ content:"SEPTIMO CIELO";display:block;font-family:Georgia,serif;
+ font-size:clamp(38px,7vw,100px);letter-spacing:-.05em;
+ opacity:.035;margin-bottom:-.25em;white-space:nowrap;overflow:hidden;
+}
+/* Desktop breathing room */
+@media(min-width:1100px){
+ .detail-grid{gap:42px!important}
+}
+/* Mobile stays faithful to approved layout */
+@media(max-width:759px){
+ .menu:before,main:before{font-size:72px;top:3rem}
+ .ar-experience-inner{display:block}
+ .ar-experience-steps{
+   display:block!important;border-left:0;padding-left:0;margin-top:20px!important;
+   border-top:1px solid var(--sc-rule)!important;
+ }
+ .ar-step{padding:11px 0!important}
+ .detail-copy{padding-top:0}
+ .detail-copy h2{font-size:40px!important}
+ .about img,.location-section img,.experience img{box-shadow:8px 8px 0 rgba(183,108,61,.06)}
+}
+
 </style></head><body>
 <section class="splash"><div class="hero"><p class="brand">SEP<span class="seven">7</span>IMO CIELO</p><p class="eyebrow">Experiencia gastronómica</p><h1>Descubre<br>antes de elegir.</h1><p class="copy">Explora nuestra carta desde una nueva perspectiva. Observa cada detalle y visualiza tu elección directamente sobre tu mesa.</p><a class="btn" href="#carta">Descubrir la carta <span>→</span></a><div class="location">Bogotá · Castilla</div></div></section>
 
@@ -370,7 +494,7 @@ section h2:where(:not(.ar-experience-title)){text-wrap:balance}
     </div>
   </div>
 </section><div class="sc-editorial-divider" aria-hidden="true"><span>✦</span></div>
-<main id="carta" class="menu"><div class="top"><div class="mini">SEP<span class="seven">7</span>IMO CIELO</div><nav class="navlinks"><a href="#carta">Carta</a><a href="#historia">Experiencia</a><a href="#ubicacion">Ubicación</a><a href="#redes">Redes</a></nav></div><h2>Elige. Explora. Descubre.</h2><p class="intro">Una sola carta, una sola experiencia. Entra a cualquier producto para conocerlo; cuando su digitalización 3D esté disponible podrás girarlo y llevarlo a tu mesa en realidad aumentada.</p><div class="tabs" id="officialTabs"></div><div id="officialMenu" class="official-menu"></div><p class="catalog-note">Los modelos 3D se descargan únicamente al abrir el producto, manteniendo la carta ligera y rápida.</p></main>
+<main id="carta" class="menu"><div class="top"><div class="mini">SEP<span class="seven">7</span>IMO CIELO</div><nav class="navlinks"><a href="#carta">Carta</a><a href="#historia">Experiencia</a><a href="#ubicacion">Ubicación</a><a href="#redes">Redes</a></nav></div><h2>La carta, antes de llegar a tu mesa.</h2><p class="intro">Descubre la propuesta gastronómica de Séptimo Cielo. En preparaciones seleccionadas podrás explorar cada detalle en 3D y visualizarlo sobre tu mesa antes de elegir.</p><div class="tabs" id="officialTabs"></div><div id="officialMenu" class="official-menu"></div><p class="catalog-note">Los modelos 3D se descargan únicamente al abrir el producto, manteniendo la carta ligera y rápida.</p></main>
 <section id="productDetail" class="product-detail" aria-hidden="true"><div class="detail-inner"><div class="detail-top"><div class="mini">SEP<span class="seven">7</span>IMO CIELO</div><button id="detailClose" aria-label="Cerrar">×</button></div><div class="detail-grid"><div id="detailVisual" class="detail-visual"></div><div class="detail-copy"><div id="detailCategory" class="detail-category"></div><h2 id="detailName"></h2><div id="detailPrice" class="detail-price"></div><p id="detailDesc"></p><div id="detailActions"></div><div id="detailNote" class="detail-note"></div><div class="related"><h3>También podría gustarte</h3><div id="relatedRow" class="related-row"></div></div></div></div></div></section><section id="historia" class="story"><div class="story-inner"><div><div class="story-kicker">Bogotá · Castilla</div><h2>Un lugar para sentirse plenamente a gusto.</h2><p>Séptimo Cielo reúne gastronomía, ambiente y servicio en un espacio pensado tanto para una comida tranquila como para una celebración especial. Nuestra experiencia inmersiva extiende esa sensación a la carta: primero descubres, luego exploras y finalmente lo llevas a tu mesa.</p><div class="quote">“Estar en el séptimo cielo” es sentirse feliz, cómodo y plenamente a gusto.</div><div class="pillars"><div class="pillar"><b>Gastronomía</b><p>Carnes, pescados, mariscos, arroces, pastas, hamburguesas, bebidas y coctelería.</p></div><div class="pillar"><b>Ambiente</b><p>Espacios amplios, cálidos y versátiles para compartir con calma.</p></div><div class="pillar"><b>Celebraciones</b><p>Momentos especiales acompañados de ambientación, detalle y servicio.</p></div></div></div><div class="story-photo"><span>Conoce nuestras instalaciones</span></div></div></section>
 <section class="celebrate"><div class="celebrate-inner"><div class="story-kicker">Celebremos juntos</div><h2>Los grandes momentos también tienen mesa.</h2><p>La experiencia de Séptimo Cielo también está pensada para fechas especiales. Integramos esta faceta del restaurante para que la carta inmersiva no sea solo un menú: también sea una puerta de entrada a todo lo que se puede vivir en el lugar.</p><div class="occasion"><span>Cumpleaños</span><span>Grados</span><span>Matrimonios</span><span>15 años</span><span>Bautizos</span><span>Primeras comuniones</span></div></div></section>
 
@@ -411,7 +535,7 @@ const tabs=document.getElementById('officialTabs'), menu=document.getElementById
 Object.entries(officialMenu).forEach(([cat,arr],i)=>{const b=document.createElement('button');b.textContent=cat;b.dataset.cat=cat;if(!i)b.className='active';tabs.appendChild(b);const sec=document.createElement('section');sec.className='menu-category'+(!i?' active':'');sec.dataset.section=cat;sec.innerHTML=`<div class="category-head"><h3>${cat}</h3><span>${arr.length} opciones</span></div><div class="product-list">`+arr.map((x,j)=>{const has=!!arAssets[x[0]];return `<article class="product-card" data-product="${j}" data-category="${cat}"><div><h4>${x[0]}</h4><p>${x[2]}</p><div class="product-meta"><span class="chip">Ver detalle</span>${has?'<span class="chip ar">3D + AR</span>':''}</div></div><strong>${x[1]}</strong></article>`}).join('')+'</div>';menu.appendChild(sec)});
 tabs.onclick=e=>{const b=e.target.closest('[data-cat]');if(!b)return;tabs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');menu.querySelectorAll('.menu-category').forEach(x=>x.classList.toggle('active',x.dataset.section===b.dataset.cat))};
 const detail=document.getElementById('productDetail');
-function openProduct(cat,idx){const x=officialMenu[cat][idx], asset=arAssets[x[0]], visual=document.getElementById('detailVisual');document.getElementById('detailCategory').textContent=cat;document.getElementById('detailName').textContent=x[0];document.getElementById('detailPrice').textContent=x[1];document.getElementById('detailDesc').textContent=x[2];if(asset){visual.innerHTML=`<div class="detail-status">Experiencia inmersiva · 3D + AR</div><div class="ar-first-tip">Gira y descubre el plato desde cada ángulo. Cuando estés listo, llévalo virtualmente a tu mesa.</div>
+function openProduct(cat,idx){const x=officialMenu[cat][idx], asset=arAssets[x[0]], visual=document.getElementById('detailVisual');document.getElementById('detailCategory').textContent=cat;document.getElementById('detailName').textContent=x[0];document.getElementById('detailPrice').textContent=x[1];document.getElementById('detailDesc').textContent=x[2];if(asset){visual.innerHTML=`<div class="detail-status">Selección inmersiva · 3D + AR</div><div class="ar-first-tip">Gira y descubre el plato desde cada ángulo. Cuando estés listo, llévalo virtualmente a tu mesa.</div>
       <model-viewer camera-orbit="${x[0]==='Tomahawk'?'0deg 65deg 175%':x[0]==='Chicharrones'?'0deg 62deg 118%':x[0]==='Spring Roll'?'0deg 65deg 120%':x[0]==='Focaccia Capresse'?'0deg 62deg 118%':x[0]==='Ensalada Séptimo Cielo'?'0deg 62deg 120%':x[0]==='Nachos de la Casa'?'0deg 62deg 122%':'0deg 65deg 105%'}" field-of-view="30deg" min-camera-orbit="${x[0]==='Tomahawk'?'auto auto 145%':x[0]==='Chicharrones'?'auto auto 95%':x[0]==='Spring Roll'?'auto auto 95%':x[0]==='Focaccia Capresse'?'auto auto 95%':x[0]==='Ensalada Séptimo Cielo'?'auto auto 96%':x[0]==='Nachos de la Casa'?'auto auto 98%':'auto auto 80%'}" max-camera-orbit="${x[0]==='Tomahawk'?'auto auto 230%':x[0]==='Chicharrones'?'auto auto 190%':x[0]==='Spring Roll'?'auto auto 190%':x[0]==='Focaccia Capresse'?'auto auto 190%':x[0]==='Ensalada Séptimo Cielo'?'auto auto 190%':x[0]==='Nachos de la Casa'?'auto auto 195%':'auto auto 160%'}" src="${asset.model}" poster="${asset.poster}" camera-controls touch-action="pan-y" ar ar-scale="fixed" ar-placement="floor" ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" shadow-intensity="1.2" shadow-softness="0.75" exposure="1.05" environment-image="neutral"><button slot="ar-button" class="arbtn">Visualizar en tu mesa</button></model-viewer>`;document.getElementById('detailNote').textContent='Visualización referencial para demostración comercial. El modelo final puede sustituirse por la digitalización autorizada del plato real.'}else{visual.innerHTML=`<div class="detail-placeholder"><div><b>${x[0]}</b><span>Este producto ya está preparado dentro de la arquitectura inmersiva. Su modelo 3D se incorporará aquí sin rediseñar la carta.</span></div></div>`;document.getElementById('detailNote').textContent='Ficha preparada para digitalización 3D. La carta mantiene la misma navegación y estructura para todos los productos.'}const related=officialMenu[cat].map((r,i)=>({r,i})).filter(o=>o.i!==idx).slice(0,4);document.getElementById('relatedRow').innerHTML=related.map(o=>`<button data-rel="${o.i}">${o.r[0]}</button>`).join('');document.getElementById('relatedRow').onclick=e=>{const b=e.target.closest('[data-rel]');if(b)openProduct(cat,+b.dataset.rel)};detail.classList.add('open');detail.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';history.replaceState(null,'',`#producto=${encodeURIComponent(x[0].toLowerCase().replaceAll(' ','-'))}`)}
 menu.onclick=e=>{const c=e.target.closest('.product-card');if(c)openProduct(c.dataset.category,+c.dataset.product)};
 document.getElementById('detailClose').onclick=()=>{detail.classList.remove('open');detail.setAttribute('aria-hidden','true');document.body.style.overflow='';history.replaceState(null,'','#carta')};
