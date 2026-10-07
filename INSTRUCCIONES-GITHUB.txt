@@ -1,4 +1,4 @@
-SÉPTIMO CIELO V17 — EDITORIAL LUXURY
+SÉPTIMO CIELO V18 — SIGNATURE EXPERIENCE
 Repositorio completo. Reemplaza el contenido anterior por TODOS los archivos de este ZIP.
-No mezcles versiones. index.html debe quedar en la raíz.
-Los 10 modelos 3D/AR y su comportamiento aprobado permanecen intactos.
+No mezcles versiones. index.html debe quedar directamente en la raíz.
+Incluye la corrección visual del visor 3D y conserva los 10 modelos/AR aprobados.

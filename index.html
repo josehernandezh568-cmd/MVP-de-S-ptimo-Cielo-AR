@@ -302,6 +302,59 @@ section h2:where(:not(.ar-experience-title)){text-wrap:balance}
 .sc-editorial-divider:before,.sc-editorial-divider:after{content:"";height:1px;flex:1;background:rgba(65,49,38,.14)}
 .sc-editorial-divider span{font-size:9px;opacity:.75}
 
+
+/* V18 — Detail viewer hierarchy fix + Signature polish */
+.detail-status{
+  position:absolute!important;
+  top:16px!important;left:16px!important;z-index:6!important;
+  display:inline-flex!important;align-items:center!important;
+  width:auto!important;max-width:calc(100% - 32px)!important;
+  padding:7px 10px!important;border-radius:999px!important;
+  background:rgba(14,13,12,.72)!important;
+  border:1px solid rgba(184,109,63,.34)!important;
+  backdrop-filter:blur(10px)!important;
+  font-size:8px!important;letter-spacing:.13em!important;text-transform:uppercase!important;
+  color:#efe8dc!important;
+}
+.detail-status:before{
+  content:"";width:5px;height:5px;border-radius:50%;background:#b86d3f;
+  box-shadow:0 0 0 3px rgba(184,109,63,.12);margin-right:7px;flex:none;
+}
+.ar-availability-pill{display:none!important}
+.ar-first-tip{
+  position:absolute!important;top:55px!important;left:16px!important;right:16px!important;z-index:5!important;
+  margin:0!important;padding:10px 12px!important;
+  border:0!important;border-left:1px solid rgba(184,109,63,.55)!important;
+  background:linear-gradient(90deg,rgba(17,16,14,.78),rgba(17,16,14,.18),transparent)!important;
+  color:rgba(244,239,230,.80)!important;font-size:10px!important;line-height:1.45!important;
+  backdrop-filter:blur(5px)!important;
+}
+.detail-visual{position:relative!important;overflow:hidden!important}
+.detail-visual:after{
+  content:"";position:absolute;inset:auto 0 0;height:24%;
+  background:linear-gradient(transparent,rgba(9,9,8,.24));pointer-events:none;z-index:2;
+}
+.detail-visual model-viewer{position:relative;z-index:1}
+/* stronger restaurant-first visual language */
+.detail-copy h2{font-weight:400;letter-spacing:-.045em}
+.detail-copy p{line-height:1.7}
+.related h3{letter-spacing:-.025em}
+.related button{
+  transition:background .22s ease,border-color .22s ease,transform .22s ease!important;
+}
+.related button:hover{
+  background:rgba(184,109,63,.08)!important;border-color:rgba(184,109,63,.42)!important;
+  transform:translateY(-1px);
+}
+/* subtle copper editorial accent */
+.detail-copy:before{
+  content:"";display:block;width:34px;height:1px;background:#b86d3f;margin:0 0 18px;
+}
+@media(max-width:759px){
+ .detail-status{top:12px!important;left:12px!important;max-width:calc(100% - 24px)!important}
+ .ar-first-tip{top:50px!important;left:12px!important;right:12px!important;font-size:9px!important}
+}
+
 </style></head><body>
 <section class="splash"><div class="hero"><p class="brand">SEP<span class="seven">7</span>IMO CIELO</p><p class="eyebrow">Experiencia gastronómica</p><h1>Descubre<br>antes de elegir.</h1><p class="copy">Explora nuestra carta desde una nueva perspectiva. Observa cada detalle y visualiza tu elección directamente sobre tu mesa.</p><a class="btn" href="#carta">Descubrir la carta <span>→</span></a><div class="location">Bogotá · Castilla</div></div></section>
 
@@ -358,8 +411,7 @@ const tabs=document.getElementById('officialTabs'), menu=document.getElementById
 Object.entries(officialMenu).forEach(([cat,arr],i)=>{const b=document.createElement('button');b.textContent=cat;b.dataset.cat=cat;if(!i)b.className='active';tabs.appendChild(b);const sec=document.createElement('section');sec.className='menu-category'+(!i?' active':'');sec.dataset.section=cat;sec.innerHTML=`<div class="category-head"><h3>${cat}</h3><span>${arr.length} opciones</span></div><div class="product-list">`+arr.map((x,j)=>{const has=!!arAssets[x[0]];return `<article class="product-card" data-product="${j}" data-category="${cat}"><div><h4>${x[0]}</h4><p>${x[2]}</p><div class="product-meta"><span class="chip">Ver detalle</span>${has?'<span class="chip ar">3D + AR</span>':''}</div></div><strong>${x[1]}</strong></article>`}).join('')+'</div>';menu.appendChild(sec)});
 tabs.onclick=e=>{const b=e.target.closest('[data-cat]');if(!b)return;tabs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));b.classList.add('active');menu.querySelectorAll('.menu-category').forEach(x=>x.classList.toggle('active',x.dataset.section===b.dataset.cat))};
 const detail=document.getElementById('productDetail');
-function openProduct(cat,idx){const x=officialMenu[cat][idx], asset=arAssets[x[0]], visual=document.getElementById('detailVisual');document.getElementById('detailCategory').textContent=cat;document.getElementById('detailName').textContent=x[0];document.getElementById('detailPrice').textContent=x[1];document.getElementById('detailDesc').textContent=x[2];if(asset){visual.innerHTML=`<div class="detail-status">Experiencia 3D disponible</div>
-      <div class="ar-availability-pill">Experiencia 3D · AR</div><div class="ar-first-tip">Explora cada detalle del plato en 3D. Para descubrirlo en tu espacio, selecciona <b>Visualizar en tu mesa</b>.</div>
+function openProduct(cat,idx){const x=officialMenu[cat][idx], asset=arAssets[x[0]], visual=document.getElementById('detailVisual');document.getElementById('detailCategory').textContent=cat;document.getElementById('detailName').textContent=x[0];document.getElementById('detailPrice').textContent=x[1];document.getElementById('detailDesc').textContent=x[2];if(asset){visual.innerHTML=`<div class="detail-status">Experiencia inmersiva · 3D + AR</div><div class="ar-first-tip">Gira y descubre el plato desde cada ángulo. Cuando estés listo, llévalo virtualmente a tu mesa.</div>
       <model-viewer camera-orbit="${x[0]==='Tomahawk'?'0deg 65deg 175%':x[0]==='Chicharrones'?'0deg 62deg 118%':x[0]==='Spring Roll'?'0deg 65deg 120%':x[0]==='Focaccia Capresse'?'0deg 62deg 118%':x[0]==='Ensalada Séptimo Cielo'?'0deg 62deg 120%':x[0]==='Nachos de la Casa'?'0deg 62deg 122%':'0deg 65deg 105%'}" field-of-view="30deg" min-camera-orbit="${x[0]==='Tomahawk'?'auto auto 145%':x[0]==='Chicharrones'?'auto auto 95%':x[0]==='Spring Roll'?'auto auto 95%':x[0]==='Focaccia Capresse'?'auto auto 95%':x[0]==='Ensalada Séptimo Cielo'?'auto auto 96%':x[0]==='Nachos de la Casa'?'auto auto 98%':'auto auto 80%'}" max-camera-orbit="${x[0]==='Tomahawk'?'auto auto 230%':x[0]==='Chicharrones'?'auto auto 190%':x[0]==='Spring Roll'?'auto auto 190%':x[0]==='Focaccia Capresse'?'auto auto 190%':x[0]==='Ensalada Séptimo Cielo'?'auto auto 190%':x[0]==='Nachos de la Casa'?'auto auto 195%':'auto auto 160%'}" src="${asset.model}" poster="${asset.poster}" camera-controls touch-action="pan-y" ar ar-scale="fixed" ar-placement="floor" ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" shadow-intensity="1.2" shadow-softness="0.75" exposure="1.05" environment-image="neutral"><button slot="ar-button" class="arbtn">Visualizar en tu mesa</button></model-viewer>`;document.getElementById('detailNote').textContent='Visualización referencial para demostración comercial. El modelo final puede sustituirse por la digitalización autorizada del plato real.'}else{visual.innerHTML=`<div class="detail-placeholder"><div><b>${x[0]}</b><span>Este producto ya está preparado dentro de la arquitectura inmersiva. Su modelo 3D se incorporará aquí sin rediseñar la carta.</span></div></div>`;document.getElementById('detailNote').textContent='Ficha preparada para digitalización 3D. La carta mantiene la misma navegación y estructura para todos los productos.'}const related=officialMenu[cat].map((r,i)=>({r,i})).filter(o=>o.i!==idx).slice(0,4);document.getElementById('relatedRow').innerHTML=related.map(o=>`<button data-rel="${o.i}">${o.r[0]}</button>`).join('');document.getElementById('relatedRow').onclick=e=>{const b=e.target.closest('[data-rel]');if(b)openProduct(cat,+b.dataset.rel)};detail.classList.add('open');detail.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';history.replaceState(null,'',`#producto=${encodeURIComponent(x[0].toLowerCase().replaceAll(' ','-'))}`)}
 menu.onclick=e=>{const c=e.target.closest('.product-card');if(c)openProduct(c.dataset.category,+c.dataset.product)};
 document.getElementById('detailClose').onclick=()=>{detail.classList.remove('open');detail.setAttribute('aria-hidden','true');document.body.style.overflow='';history.replaceState(null,'','#carta')};

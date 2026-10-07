@@ -98,3 +98,7 @@ Los 10 modelos, cámaras, escala, AR y comportamiento móvil permanecen intactos
 Profundización visual de la identidad Séptimo Cielo sin alterar la arquitectura funcional:
 ritmo editorial, detalles cobre, microinteracciones, navegación refinada, tarjetas con respuesta sutil,
 mayor profundidad en el visor 3D y recursos tipográficos de marca. Los 10 modelos y AR permanecen intactos.
+
+## V18 — Signature Experience
+Corrección del visor señalada en revisión: se elimina la doble etiqueta superpuesta y se crea una jerarquía limpia.
+El detalle del plato recibe un tratamiento más gastronómico/editorial, manteniendo los 10 modelos y toda la lógica AR.
